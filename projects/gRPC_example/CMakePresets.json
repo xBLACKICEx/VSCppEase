@@ -1,0 +1,71 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "vs-msvc",
+            "displayName": "Visual Studio Community 2022 Release - amd64",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            }
+        },
+        {
+            "name": "ninja",
+            "inherits": "vs-msvc",
+            "generator": "Ninja"
+        },
+        {
+            "name": "ninja-conan-debug",
+            "inherits": "ninja",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/out/conan-generated/Debug/conan_toolchain.cmake"
+            }
+        },
+        {
+            "name": "ninja-conan-release",
+            "inherits": "ninja-conan-debug",
+            "cacheVariables": {
+                "BUILD_TESTING": "OFF",
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/out/conan-generated/Release/conan_toolchain.cmake"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "vs-msvc-debug",
+            "displayName": "Visual Studio Community 2022 Release - amd64 - Debug",
+            "configurePreset": "vs-msvc",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs-msvc-release",
+            "displayName": "Visual Studio Community 2022 Release - amd64 - Release",
+            "configurePreset": "vs-msvc",
+            "configuration": "Release"
+        },
+        {
+            "name": "ninja-debug",
+            "configurePreset": "ninja",
+            "configuration": "Debug"
+        },
+        {
+            "name": "ninja-release",
+            "configurePreset": "ninja",
+            "configuration": "Release"
+        },
+        {
+            "name": "ninja-conan-debug",
+            "configurePreset": "ninja-conan-debug"
+        },
+        {
+            "name": "ninja-conan-release",
+            "configurePreset": "ninja-conan-release"
+        }
+    ]
+}

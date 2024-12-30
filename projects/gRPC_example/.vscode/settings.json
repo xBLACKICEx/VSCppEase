@@ -1,0 +1,28 @@
+{
+    "vsconan.conan.profile.default": "default",
+
+    "clangd.fallbackFlags": [
+        "-std=c++23", // <- if you want to use C++23 (you can configure this .clangd file in your workspace)
+
+        // 👇 if set compile_commands.json with CMAKE, You usually don't need set this any more.
+        // "-I${workspaceFolder}/includes/",
+        // "-I${workspaceFolder}/protos/generated"
+    ],
+
+    // "c-cpp-flylint.clang.includes": [
+    //     "${workspaceFolder}/protos/generated"
+    // ],
+    "c-cpp-flylint.includePaths": [
+        // "${workspaceFolder}/protos/generated", // ↑ only active for clang now, checkcpp(C/C++ Advanced Lint) will not work properly with this ???
+        // (src) include paths
+        "${workspaceFolder}/includes"
+    ],
+    "c-cpp-flylint.standard": [
+        "c23",
+        "c++23"
+    ],
+    "C_Cpp.codeAnalysis.exclude": {
+        "**/out": true,
+        "**/protos/generated": true
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "dependencies": [
+    "grpc",
+    "protobuf",
+    "gtest"
+  ]
+}

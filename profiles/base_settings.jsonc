@@ -1,0 +1,70 @@
+{
+/// START --- FORCE GLOBAL SETTINGS --- START ///
+    "workbench.settings.applyToAllProfiles": [
+        "chat.experimental.detectParticipant.enabled",
+
+        "editor.fontFamily",
+        "editor.fontLigatures",
+        "editor.cursorBlinking",
+        "editor.fontSize",
+        "editor.fontWeight",
+        "editor.mouseWheelZoom",
+        "editor.renderWhitespace",
+        "editor.smoothScrolling",
+        "editor.cursorSmoothCaretAnimation",
+
+        "errorLens.enabled",
+        "errorLens.gutterIconsEnabled",
+        "errorLens.scrollbarHackEnabled",
+        "errorLens.statusBarColorsEnabled",
+
+        "github.copilot.chat.generateTests.codeLens",
+        "github.copilot.chat.search.semanticTextResults",
+
+        "material-icon-theme.files.associations",
+        "terminal.integrated.fontSize",
+        "terminal.integrated.smoothScrolling",
+
+        "workbench.colorTheme",
+        "workbench.list.smoothScrolling",
+        "workbench.panel.showLabels",
+        "workbench.productIconTheme",
+        "workbench.settings.enableNaturalLanguageSearch"
+    ],
+    "chat.experimental.detectParticipant.enabled": true,
+
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.fontFamily": "JetBrainsMono Nerd Font Propo",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 11,
+    "editor.fontWeight": "400",
+    "editor.mouseWheelZoom": true,
+    "editor.renderWhitespace": "all",
+    "editor.smoothScrolling": true,
+
+    "errorLens.enabled": true,
+    "errorLens.gutterIconsEnabled": true,
+    "errorLens.scrollbarHackEnabled": true,
+    "errorLens.statusBarColorsEnabled": true,
+
+    "github.copilot.chat.generateTests.codeLens": true,
+    "github.copilot.chat.search.semanticTextResults": true,
+
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.smoothScrolling": true,
+
+    "workbench.colorTheme": "Gradient Bearded Theme Arc",
+    "workbench.list.smoothScrolling": true,
+    "workbench.panel.showLabels": false,
+    "workbench.settings.enableNaturalLanguageSearch": true,
+/// END --- FORCE GLOBAL SETTINGS --- END ///
+
+/// START --- DEFAULT SETTINGS --- START ///
+    "codesnap.showWindowControls": false,
+    "codesnap.shutterAction": "copy",
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "fluent-icons"
+/// END --- DEFAULT SETTINGS --- END ///
+}
